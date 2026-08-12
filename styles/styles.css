@@ -136,7 +136,8 @@ body {
 .attribution {
     max-width: 327px;
     text-align: center;
-    margin-block: 1.5rem auto;
+    margin: 24px auto 0;
+    /* margin-top: 24px, остальное auto */
     padding: 0 1rem;
     font-size: 0.75rem;
     opacity: 0.7;
@@ -157,26 +158,26 @@ body {
     opacity: 0.3;
 }
 
+/* ===== ДЕСКТОП ===== */
 @media (min-width: 23.5em) {
-    @media (min-width: 23.5em) {
-        .card {
-            width: 384px;
-            min-height: 610px;
-            padding: 40px;
-        }
-
-        .attribution {
-            max-width: 384px;
-        }
+    .card {
+        width: 384px;
+        min-height: 610px;
+        padding: 40px;
     }
 
-    @media (prefers-reduced-motion: reduce) {
+    .attribution {
+        max-width: 384px;
+    }
+}
 
-        *,
-        *::before,
-        *::after {
-            animation-duration: 0.01ms !important;
-            transition-duration: 0.01ms !important;
-        }
+/* ===== PREFERS-REDUCED-MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
     }
 }
