@@ -158,7 +158,6 @@ body {
     opacity: 0.3;
 }
 
-/* ===== ДЕСКТОП ===== */
 @media (min-width: 23.5em) {
     .card {
         width: 384px;
@@ -171,7 +170,6 @@ body {
     }
 }
 
-/* ===== PREFERS-REDUCED-MOTION ===== */
 @media (prefers-reduced-motion: reduce) {
 
     *,
