@@ -56,11 +56,11 @@ body {
 }
 
 .card {
-    max-width: 384px;
-    min-height: 610px;
+    width: 327px;
+    min-height: auto;
     background-color: var(--color-gray-800);
     border-radius: 10px;
-    padding: 40px;
+    padding: 24px;
 }
 
 .personal-information {
@@ -75,27 +75,27 @@ body {
     min-width: 90px;
     height: auto;
     border-radius: 50%;
-    margin: 0 auto 30px;
+    margin: 0 auto 1.5rem;
 }
 
 .name {
     display: block;
     font-size: 1.5rem;
     font-weight: 700;
-    padding-bottom: 10px;
+    padding-block-end: 0.1875rem;
 }
 
 .location {
     display: block;
     font-weight: 700;
     color: var(--color-green);
-    padding-bottom: 30px;
+    padding-block-end: 1.5rem;
 }
 
 .profession {
     display: block;
     font-weight: 600;
-    padding-bottom: 24px;
+    padding-block-end: 1.5rem;
 }
 
 .link-list {
@@ -103,7 +103,7 @@ body {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 1rem;
 }
 
 .social {
@@ -118,7 +118,8 @@ body {
     border-radius: 8px;
     text-align: center;
     font-weight: 700;
-    padding: 15px;
+    padding: 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .social-link:hover,
@@ -133,11 +134,17 @@ body {
 }
 
 .attribution {
-    margin: 24px auto;
+    max-width: 327px;
+    text-align: center;
+    margin-block: 1.5rem auto;
+    padding: 0 1rem;
+    font-size: 0.75rem;
+    opacity: 0.7;
 }
 
 .sign {
     text-decoration: underline;
+    transition: color 0.3s ease;
 }
 
 .sign:hover,
@@ -148,4 +155,28 @@ body {
 
 .sign:active {
     opacity: 0.3;
+}
+
+@media (min-width: 23.5em) {
+    @media (min-width: 23.5em) {
+        .card {
+            width: 384px;
+            min-height: 610px;
+            padding: 40px;
+        }
+
+        .attribution {
+            max-width: 384px;
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
 }
