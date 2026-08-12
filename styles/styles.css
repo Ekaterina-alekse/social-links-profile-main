@@ -53,3 +53,11 @@ body {
     border: 0;
     white-space: nowrap;
 }
+
+.card {
+    max-width: 384px;
+    min-height: 610px;
+    background-color: var(--color-gray-800);
+    border-radius: 10px;
+    padding: 40px;
+}
